@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "864773276168",
+    "project_id": "dots-2d629",
+    "storage_bucket": "dots-2d629.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864773276168:android:27abd15b477014b5f1c7bd",
+        "android_client_info": {
+          "package_name": "com.walkinvibe.doot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864773276168-1hu361vbtptn4dspeubc4jnh3h5tmhne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVly9uybjv5HoaMr9o4fa51YNKaqn3mJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864773276168-1hu361vbtptn4dspeubc4jnh3h5tmhne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
