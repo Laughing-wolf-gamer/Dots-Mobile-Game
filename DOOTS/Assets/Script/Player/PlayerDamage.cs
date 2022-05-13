@@ -18,11 +18,11 @@ public class PlayerDamage : MonoBehaviour
         {
             switch(playerMove.GetFeature()){
                 case FeatureType.speed:
-                    Damage();
+                    StartCoroutine(Damage());
                 break;
 
                 case FeatureType.None:
-                    Damage();
+                    StartCoroutine(Damage());
 
                 break;
 
@@ -30,18 +30,26 @@ public class PlayerDamage : MonoBehaviour
                     StartCoroutine(reflect());
 
                 break;
-
             }
 
             
         }
     }
-    public void Damage()
+    public IEnumerator Damage()
     {
+        Time.timeScale = 0.00f;
+        playerMove.TargetIndexchange();
+        yield return new WaitForSecondsRealtime(0.2f);
+        Time.timeScale = 1f;
         gameFeel.PlayerHit();
-        playerMove.CanMoveFalse();
+
         
     }
+    public void methodofreflect()
+    {
+        StartCoroutine(reflect());
+    }
+    
     IEnumerator reflect()
     {
         Time.timeScale = 0.00f;

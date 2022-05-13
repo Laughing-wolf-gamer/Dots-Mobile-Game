@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-public enum Feature{None,spped,cmove,sheid};
+public enum Feature{None,spped,cmove,sheid,blastCoin};
 
 public class Enemy : MonoBehaviour
 {
@@ -22,10 +22,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]private GameObject speedIcon;
     [SerializeField]private GameObject cmovesIcon;
     [SerializeField]private GameObject sheildIcon;
+    [SerializeField]private GameObject blastcoin;
     [SerializeField]private Animator obstacle;
     [SerializeField]private GameObject ShockEffect;
     [SerializeField]private AudioSource waterDrop;
-
+    
     private void Awake() {
         if(feature == Feature.None)
         {
@@ -42,6 +43,10 @@ public class Enemy : MonoBehaviour
         else if(feature == Feature.sheid)
         {
             sheildIcon.SetActive(true);
+        }
+        else if(feature == Feature.blastCoin)
+        {
+            blastcoin.SetActive(true);
         }
     }
     private void OnTriggerEnter2D(Collider2D other) {
@@ -67,6 +72,10 @@ public class Enemy : MonoBehaviour
             {
                 sheild.SetActive(true);
 
+            }
+            else if(feature == Feature.blastCoin)
+            {
+                UiManager.instane.blastSpread();
             }
         }
         else if(transform.name == "startpoint" || transform.name == "finish")

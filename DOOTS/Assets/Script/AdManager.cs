@@ -12,6 +12,15 @@ public class AdManager : MonoBehaviour
     [SerializeField] string _rewardAdUnitId;
     int interstitialRetryAttempt;
     int rewardRetryAttempt;
+
+
+    public static bool speedPowerUp;
+    public static bool sheildpowerUp;
+    public static bool cmove;
+    public static bool nevergiveup;
+    public static bool blastCoin;
+
+
     public static AdManager instance;
 
     private void Awake()
@@ -33,7 +42,7 @@ public class AdManager : MonoBehaviour
 
     public void InitializeBannerAds()
     {
-        // Banners are automatically sized to 320×50 on phones and 728×90 on tablets
+        // Banners are automatically sized to 320ï¿½50 on phones and 728ï¿½90 on tablets
         // You may call the utility method MaxSdkUtils.isTablet() to help with view sizing adjustments
         MaxSdk.CreateBanner(_bannerAdUnitId, MaxSdkBase.BannerPosition.BottomCenter);
 
@@ -87,6 +96,7 @@ public class AdManager : MonoBehaviour
         MaxSdkCallbacks.Interstitial.OnAdClickedEvent += OnInterstitialClickedEvent;
         MaxSdkCallbacks.Interstitial.OnAdHiddenEvent += OnInterstitialHiddenEvent;
         MaxSdkCallbacks.Interstitial.OnAdDisplayFailedEvent += OnInterstitialAdFailedToDisplayEvent;
+        
 
         // Load the first interstitial
         LoadInterstitial();
@@ -141,7 +151,8 @@ public class AdManager : MonoBehaviour
     private void OnInterstitialHiddenEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
     {
         // Interstitial ad is hidden. Pre-load the next ad.
-        LoadInterstitial();
+        // LoadInterstitial();
+
     }
 
     #endregion
@@ -197,7 +208,7 @@ public class AdManager : MonoBehaviour
         rewardRetryAttempt++;
         double retryDelay = Math.Pow(2, Math.Min(6, rewardRetryAttempt));
 
-        Invoke("LoadRewardedAd", (float)retryDelay);
+        Invoke(nameof(LoadRewardedAd), (float)retryDelay);
     }
 
     private void OnRewardedAdDisplayedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo) { }
@@ -219,6 +230,29 @@ public class AdManager : MonoBehaviour
     private void OnRewardedAdReceivedRewardEvent(string adUnitId, MaxSdk.Reward reward, MaxSdkBase.AdInfo adInfo)
     {
         // The rewarded ad displayed and the user should receive the reward.
+        if(speedPowerUp){
+            UiManager.instane.isFireFeatureAds();
+            speedPowerUp = false;
+        }
+        else if(sheildpowerUp){
+            UiManager.instane.issheidFeatureAds();
+            sheildpowerUp = false;
+        }
+        else if(cmove)
+        {
+            UiManager.instane.iscmoveFeatureAds();
+            cmove = false;
+        }
+        else if(nevergiveup)
+        {
+            UiManager.instane.PlayerReflect();
+            nevergiveup = false;
+        }
+        else if(blastCoin)
+        {
+            UiManager.instane.coinblast();
+            blastCoin = false;
+        }
     }
 
     private void OnRewardedAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)

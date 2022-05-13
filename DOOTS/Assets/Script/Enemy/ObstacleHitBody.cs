@@ -8,7 +8,7 @@ public class ObstacleHitBody : MonoBehaviour
     [SerializeField]private obstacle obstacle;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        obstacle.enabled= false;
+        // obstacle.enabled= false;
     }
 
 }

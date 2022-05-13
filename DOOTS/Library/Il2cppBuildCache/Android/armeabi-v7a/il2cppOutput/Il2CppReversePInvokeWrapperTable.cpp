@@ -99,11 +99,13 @@ public:
 #pragma clang diagnostic pop
 #endif
 
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_AppleStoreImpl_MessageCallback_mA6FE1905E824EB9681CDFE9B22DD989FB5AFD5B3(char* ___subject0, char* ___payload1, char* ___receipt2, char* ___transactionId3);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_OSSpecificSynchronizationContext_InvocationEntry_m0045E44F7E960D6B4A864D5206D4116249C09BB0(intptr_t ___arg0);
 
 
 IL2CPP_EXTERN_C const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[];
-const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[1] = 
+const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[2] = 
 {
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_AppleStoreImpl_MessageCallback_mA6FE1905E824EB9681CDFE9B22DD989FB5AFD5B3),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_OSSpecificSynchronizationContext_InvocationEntry_m0045E44F7E960D6B4A864D5206D4116249C09BB0),
 };

@@ -6,12 +6,81 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/loadinScreen.unity
+    path: Assets/Scenes/l.unity
     guid: 68be5f75980bc4d4fac90d172b841253
   - enabled: 1
-    path: Assets/Scenes/levels/1.unity
+    path: Assets/Scenes/0.unity
+    guid: 8699a30262b2d5b4985c6774cef1343f
+  - enabled: 1
+    path: Assets/Scenes/levels/deepSky/1.unity
     guid: d26e8761a005cf747a8b6acc7e839500
   - enabled: 1
-    path: Assets/Scenes/levels/2.unity
-    guid: 000820c57cb19ff47804c4aa4621eae4
+    path: Assets/Scenes/levels/deepSky/2.unity
+    guid: f47e403ea9e134149b219a6c379402ca
+  - enabled: 1
+    path: Assets/Scenes/levels/deepSky/3.unity
+    guid: bcddd283b252d5d4fb799b73c4e3a86a
+  - enabled: 1
+    path: Assets/Scenes/levels/deepSky/4.unity
+    guid: 390a55b48f8b98740841a3409425416c
+  - enabled: 1
+    path: Assets/Scenes/levels/deepSky/5.unity
+    guid: 31ec32f5628f7074eba99291cbee4510
+  - enabled: 1
+    path: Assets/Scenes/levels/deepSky/6.unity
+    guid: 27aa60f41f30a4e41905857425b30128
+  - enabled: 1
+    path: Assets/Scenes/levels/deepSky/7.unity
+    guid: 669b6bb4fa2869e44bfd56df0a02694f
+  - enabled: 1
+    path: Assets/Scenes/levels/deepSky/8.unity
+    guid: f3509d15de065284795c0a18662ee287
+  - enabled: 1
+    path: Assets/Scenes/levels/deepSky/9.unity
+    guid: 10610fd0c95680a4fa935c07c266b5a7
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/10.unity
+    guid: 8d884ad50a25e5941bc2e0ae78b552b8
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/11.unity
+    guid: ca69c4ffec706b3408de3c2f8d052c45
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/12.unity
+    guid: e4fb2282e166b5141a138dd8a0b96e40
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/13.unity
+    guid: 944e0c0ad383324449634a436b5fbf6b
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/14.unity
+    guid: c54a3ef8c3395624c8b849ad056c0c3a
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/15.unity
+    guid: 258aaa1d4a44dd94084936832eabf0e5
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/16.unity
+    guid: e184ac2318902b54f9147e88c2594007
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/17.unity
+    guid: 46941230cf677d14c9da1ad92e779932
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/18.unity
+    guid: 3d43c96bd616f5e459a54dc8a88cbf39
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/19.unity
+    guid: 7d17157da52809046a6cc88011ad61b8
+  - enabled: 1
+    path: Assets/Scenes/levels/SpaceCloud/20.unity
+    guid: b81d02671afc5b248be6739c632f83c6
+  - enabled: 1
+    path: Assets/Scenes/levels/SunSet/21.unity
+    guid: 6d20d17a312105d4cafa8d62cb5bb516
+  - enabled: 1
+    path: Assets/Scenes/levels/SunSet/22.unity
+    guid: 6e4398a8f01048b40969770dd4dd7b0f
+  - enabled: 1
+    path: Assets/Scenes/levels/SunSet/23.unity
+    guid: b1d4005e7b57f374cbbadfbb4b508d6e
+  - enabled: 1
+    path: Assets/Scenes/levels/SunSet/24.unity
+    guid: b315b3d1ccddbf2458692b7d0c786ddd
   m_configObjects: {}

@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]private GameManger gameManger;
     [SerializeField]private float hitSecond;
     [SerializeField]private AudioManagers featureAudio;
-
+    [SerializeField]private UiManager uiManager;
     //=======player feature mode=========
     [SerializeField]private FeatureType feature;
     
@@ -78,6 +78,7 @@ public class PlayerMove : MonoBehaviour
             if(other.transform.CompareTag("Enemy"))
             {
                 lineOwn.SetActive(true);
+                uiManager.feautureNormal();
                 speed = 5;
                 input.isInputEnabletrue();
                 TriggerBool = true;
@@ -97,7 +98,7 @@ public class PlayerMove : MonoBehaviour
                     if(enemy.isEqual(Feature.spped))
                     {
                         feature = FeatureType.speed;
-                        speed = 20;
+                        speed = 13;
                     }
                     else if(enemy.isEqual(Feature.cmove))
                     {
@@ -173,4 +174,21 @@ public class PlayerMove : MonoBehaviour
             isRunning = false;            
         }
     }
+    //------------EXTERNAL METHOD TO CREATE FEATURES------------
+    public void speedexternal()
+    {
+        feature = FeatureType.speed;
+        speed = 13;
+    }
+    public void sheidexternal()
+    {
+        feature = FeatureType.sheild;
+       
+    }
+    public void cmoveexternal()
+    {
+        feature = FeatureType.c2move;
+   
+    }
+    
 }
